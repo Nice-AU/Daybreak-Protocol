@@ -2,9 +2,23 @@
 
 **Daybreak Protocol** is a timed JavaFX code-breaking game made for the DEV June Solstice Game Jam. Repair six symbolic Bombe relays before the solstice sun sets. Every puzzle teaches or applies an algorithmic idea connected to Alan Turing's legacy.
 
-## Play
+![Daybreak Protocol gameplay demo](docs/media/daybreak-protocol-demo.gif)
 
-On this computer, double-click `run.bat`.
+## Play The Windows EXE
+
+In the packaged GitHub-ready folder, double-click:
+
+```text
+DaybreakProtocol.exe
+```
+
+The executable includes its own trimmed JavaFX runtime. Java does not need to be installed.
+
+The full 27-second gameplay video is at `docs/media/daybreak-protocol-demo.mp4`.
+
+## Developer Run
+
+From the source project on this computer, double-click `run.bat`.
 
 Controls:
 
@@ -17,14 +31,14 @@ Wrong answers cost sixteen seconds. Correct answers restore eight seconds and bu
 
 ## Build And Test
 
-The scripts use the installed Azul Zulu Java 11 JDK with JavaFX:
+The developer scripts use the installed Azul Zulu Java 11 JDK with JavaFX:
 
 ```bat
 build.bat
 test.bat
 ```
 
-The runnable JAR is written to `build\DaybreakProtocol.jar`. Because JavaFX is bundled with the local JDK rather than the JAR, use `run.bat` for the simplest launch.
+The runnable JAR is written to `build\DaybreakProtocol.jar`. The distributable Windows package includes a self-contained runtime and direct `.exe`.
 
 ## Why It Fits The Jam
 
@@ -41,6 +55,7 @@ resources/styles/       Visual theme
 resources/assets/       Supplied animated art
 tests/daybreak/         Dependency-free logic test
 docs/                   Submission, recording, and design notes
+docs/media/             MP4 and animated GIF gameplay demos
 ```
 
 ## Submission Deadline
@@ -51,4 +66,4 @@ The official deadline is **June 21, 2026 at 11:59 PM PDT**. In Sydney, Australia
 
 Game concept, writing, puzzle design, UI implementation, and procedural solstice artwork were created for this jam entry on June 15, 2026 with assistance from OpenAI Codex.
 
-The animated character and dinosaur assets in `resources/assets` were supplied by the project owner. See `docs/ASSET-CREDITS.md`. The entry should not claim the optional Google AI prize category unless a genuine Google AI integration is added and documented.
+The character, dinosaur, icon, event, and landmark assets in `resources/assets` were supplied by the project owner. See `docs/ASSET-CREDITS.md`. The entry should not claim the optional Google AI prize category unless a genuine Google AI integration is added and documented.
