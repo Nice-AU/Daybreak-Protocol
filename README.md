@@ -4,9 +4,21 @@
 
 ![Daybreak Protocol gameplay demo](docs/media/daybreak-protocol-demo.gif)
 
-## Play The Windows EXE
+## Install On Windows
 
-In the packaged GitHub-ready folder, double-click:
+For the normal player experience, double-click:
+
+```text
+Install-DaybreakProtocol.exe
+```
+
+The installer needs no administrator rights. It installs the bundled JavaFX runtime, creates a Start Menu entry, optionally creates a Desktop shortcut, and registers a Windows uninstaller.
+
+The installer is currently unsigned because no commercial Windows code-signing certificate was provided. Windows SmartScreen may show an "Unknown publisher" warning; signing the final release is recommended.
+
+## Portable Windows EXE
+
+For portable play without installation, keep the `app` and `runtime` folders beside the launcher and double-click:
 
 ```text
 DaybreakProtocol.exe
@@ -38,7 +50,9 @@ build.bat
 test.bat
 ```
 
-The runnable JAR is written to `build\DaybreakProtocol.jar`. The distributable Windows package includes a self-contained runtime and direct `.exe`.
+The runnable JAR is written to `build\DaybreakProtocol.jar`. The distributable Windows package includes both a proper installer and a portable self-contained launcher.
+
+The installer is built with Inno Setup 6 from `installer/DaybreakProtocol.iss`.
 
 ## Why It Fits The Jam
 
